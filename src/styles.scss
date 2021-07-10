@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
+@import "~bootstrap/dist/css/bootstrap.css";  
+
+body {
+    margin: 0 !important;
+}
+
+.mat-button {
+    background: #2c3e50;
+    color: white;
+    border-radius: 1px !important;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 80px !important;
+}
+
+.mat-drawer-inner-container { 
+    cursor: pointer !important;
+}

@@ -1,0 +1,70 @@
+<h3 mat-dialog-title *ngIf="userId === 0">Add new User</h3>
+<h3 mat-dialog-title *ngIf="userId > 0">Edit User</h3>
+<div mat-dialog-content>
+    <div class="card-body">
+        <form [formGroup]="userForm">
+            <div style="border: 1px solid;padding: 20px;">
+                <div class="row">
+                    <div class="col">
+                        <h4><b>User Details</b></h4>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <input type="text" formControlName="name" class="form-control"
+                                placeholder="Name *" />
+                        </div>
+                        <div *ngIf="submitted && fields.name.errors" class="a-form-error input-error">
+                            <div *ngIf="fields.name.errors.required">Name is required</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="text" formControlName="lastname" class="form-control"
+                                placeholder="Lastname *" />
+                        </div>
+                        <div *ngIf="submitted && fields.lastname.errors" class="a-form-error input-error">
+                            <div *ngIf="fields.lastname.errors.required">Lastname is required</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="text" formControlName="email" class="form-control"
+                                placeholder="Email *" />
+                        </div>
+                        <div *ngIf="submitted && fields.email.errors" class="a-form-error input-error">
+                            <div *ngIf="fields.email.errors.required">Email is required</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="text" formControlName="contact" class="form-control"
+                                placeholder="Contact *" />
+                        </div>
+                        <div *ngIf="submitted && fields.contact.errors" class="a-form-error input-error">
+                            <div *ngIf="fields.contact.errors.required">Contact is required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="row" style="text-align: right;">
+            <div class="col">
+                <button (click)="closeModal()"mat-button class="mat-button">Cancel</button> &nbsp;&nbsp;&nbsp;
+                <button (click)="saveUser()" mat-button class="mat-button">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

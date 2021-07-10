@@ -1,27 +1,15 @@
-# Webapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+Steps
 
-## Development server
+1. Open the "webapp folder" in integrated termina1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2. run "npm i / npm install" command to install the node packages
 
-## Code scaffolding
+3. run "npm run start" command to start up the project
+  the project will start on port: 5000
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+4. open browser (Chrome) and run the url "http://localhost:5000/"
 
-## Build
+5. Select "Users" on the menu to view the User's table (it will display all the users from the serve)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+6. You can update or create a new user

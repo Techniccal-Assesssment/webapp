@@ -1,0 +1,61 @@
+<mat-card>
+    <div class="row">
+        <div class="col">
+            <div>
+                <h4>Users</h4>
+            </div>
+            <br>
+            <div>
+                <div>
+                    <div class="row">
+                        <div class="col">
+                            <button mat-button class="mat-button" (click)="addNew()">Add New</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="padding-bottom-15">&nbsp;</div>
+                <div class="mat-elevation-z8">
+                    <table class="table" mat-table [dataSource]="dataSource" matSort>
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                        </ng-container>
+                        <!-- Lastname Column -->
+                        <ng-container matColumnDef="lastname">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Lastname </th>
+                            <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+                        </ng-container>
+                        <!-- Email Column -->
+                        <ng-container matColumnDef="email">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+                            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                        </ng-container>
+                        <!-- Lastname Column -->
+                        <ng-container matColumnDef="contact">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Contact </th>
+                            <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+                        </ng-container>
+
+                        <!-- Actions Column -->
+                        <ng-container matColumnDef="actions">
+                            <th mat-header-cell *matHeaderCellDef> Actions </th>
+                            <td mat-cell *matCellDef="let element">
+                                <button (click)="editUser(element.id)" title="Update User" mat-icon-button
+                                    aria-label="Update User">
+                                    <mat-icon>open_in_new</mat-icon>
+                                </button>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                    <mat-paginator [pageSizeOptions]="[5, 10, 15, 25,50]"></mat-paginator>
+                </div>
+            </div>
+            <div class="padding-bottom-15">&nbsp;</div>
+        </div>
+    </div>
+</mat-card>
